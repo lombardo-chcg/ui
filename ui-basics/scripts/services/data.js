@@ -13,7 +13,7 @@ angular.module("todoListApp")
 			$scope.todos.splice($index, 1);
 		};
 
-		this.saveToDo = function(toDo) {
+		this.saveToDos = function(toDo) {
 			console.log(toDo.name, "has been saved");
 		};
 

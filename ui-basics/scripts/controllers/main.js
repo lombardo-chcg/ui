@@ -17,8 +17,8 @@ angular.module("todoListApp")
 			dataService.deleteToDo(toDo);
 		};
 
-		$scope.saveToDo = function(toDo) {
-			dataService.saveToDo(toDo);
+		$scope.saveToDos = function(toDo) {
+			dataService.saveToDos(toDo);
 		};		
 
 	})

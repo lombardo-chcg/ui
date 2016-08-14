@@ -1,0 +1,31 @@
+
+<div class="container">
+	<h1>{{company.company_name}}</h1>
+	<ul class="list-group">
+	  <li class="list-group-item">{{company.url}}</li>
+	  <li class="list-group-item">{{company.email}}</li>
+	  <li class="list-group-item">{{company.city}}</li> 
+ 	  <li class="list-group-item">{{company.state}}</li>
+ 	  <li class="list-group-item">{{company.asset_description}}</li> 	  
+	</ul>
+
+	<h3>Data</h3>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Reading</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="reading in company.data_readings">
+        <td>{{reading.time}}</td>
+        <td>{{reading.reading}}</td>
+        <td>{{reading.score}}</td>  
+      </tr>
+    </tbody>
+  </table>	
+
+</div>	

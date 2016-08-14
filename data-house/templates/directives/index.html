@@ -2,6 +2,9 @@
 <div class="container">
   <h2>Companies In Our Database</h2>
   <p>Click a row to see details</p>
+  <a ui-sref=".list" class="btn btn-primary">show</a>
+  <a ui-sref=".paragraph" class="btn btn-danger">hide</a>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -13,8 +16,8 @@
     </thead>
     <tbody>
       <tr ng-repeat="company in companies">
-        <td><a href="/show/{{company.id}}">{{company.id}}</a></td>
-        <td><a href="/show/{{company.id}}">{{company.company_name}}</a></td>
+        <td><a href="#/companies/{{company.id}}">{{company.id}}</a></td>
+        <td><a href="#/companies/{{company.id}}">{{company.company_name}}</a></td>
         <td>{{company.city}}</td>
         <td>{{company.data_readings.length}}</td>
       </tr>

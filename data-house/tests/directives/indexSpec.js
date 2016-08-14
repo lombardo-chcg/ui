@@ -65,7 +65,7 @@ describe("index", function() {
     // fire all the watches, so the scope expression will be evaluated
     $rootScope.$digest();
 
-    expect(indexHtml.html()).toContain('href="/show/1"');
+    expect(indexHtml.html()).toContain('href="#/companies/1"');
   });
 
 

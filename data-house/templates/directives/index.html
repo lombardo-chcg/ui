@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h2>Companies In Our Database</h2>
+  <p>Click a row to see details</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Company ID</th>
+        <th>Company Name</th>
+        <th>Location</th>
+        <th>Data Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="company in companies">
+        <td><a href="/show/{{company.id}}">{{company.id}}</a></td>
+        <td><a href="/show/{{company.id}}">{{company.company_name}}</a></td>
+        <td>{{company.city}}</td>
+        <td>{{company.data_readings.length}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

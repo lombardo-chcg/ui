@@ -9,9 +9,29 @@
  	  <li class="list-group-item">{{company.asset_description}}</li> 	  
 	</ul>
 
-	<h3>Data</h3>
 
-  <table class="table table-striped">
+  <h1>Data</h1>
+
+  <h2>Average Score: {{average}}</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+    <h4>toggle</h4>
+      <a ng-click="show()" class="btn btn-primary">show</a>
+      <a ng-click="hide()" class="btn btn-danger">hide</a>
+    </div>
+
+    <div class="col-sm-6">
+      <h4>sort</h4>
+      <select ng-model="sortOrder">
+        <option selected value="time">date</option>
+        <option value="reading">reading</option>
+        <option value="score">score</option>
+      </select>
+    </div>
+  </div>
+
+  <table ng-show="toggleShowValue" class="table table-striped">
     <thead>
       <tr>
         <th>Date</th>
@@ -20,7 +40,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="reading in company.data_readings">
+      <tr ng-repeat="reading in company.data_readings | orderBy: sortOrder">
         <td>{{reading.time}}</td>
         <td>{{reading.reading}}</td>
         <td>{{reading.score}}</td>  

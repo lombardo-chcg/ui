@@ -1,7 +1,7 @@
 	<div class="list">
 
 	<div class="add">
-		<a ng-click="addToDo()" href="">+ add a new to do </a>
+		<a id="add-todo" ng-click="addToDo()" href="">+ add a new to do </a>
 	</div>
 
 		<div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-repeat="todo in todos | orderBy: 'completed' " ng-init="todo.completed = false">

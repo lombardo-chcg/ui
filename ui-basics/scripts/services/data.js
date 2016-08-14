@@ -4,7 +4,7 @@ angular.module("todoListApp")
 .service("dataService", function($http) {
 		
 		this.getToDos = function(callback) {
-			$http.get("http://localhost:9090/scripts/mock/todos.json")
+			$http.get("./scripts/mock/todos.json")
 			.then(callback)
 		};
 

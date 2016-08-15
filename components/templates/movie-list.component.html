@@ -2,4 +2,33 @@
 	<h3>{{model.message}}</h3>
 	<input type="text" ng-model="model.message">
 	<button ng-click="model.changeMessage()">change message</button>
+	
+	<hr>
+
+	<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th>Title</th>
+	      <th>Rating</th>
+	      <th>Length</th>
+	      <th>Vote!</th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <tr ng-repeat="movie in model.movies">
+	      <td>{{movie.title}}</td>
+	      <td>{{movie.rating}}</td>
+	      <td>{{movie.length}}</td>
+	      <td>
+	      	<div class="btn-group">
+	      		<button ng-click="model.upRate(movie)" 		class="btn btn-primary">+</button>
+	      		<button ng-click="model.downRate(movie)"  class="btn btn-danger">-</button>
+
+	      	</div>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+
 </div>

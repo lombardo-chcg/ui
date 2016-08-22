@@ -304,3 +304,18 @@ temp.invoke(7); // => logs 7
 temp.revoke();
 console.log('here');
 temp.invoke(7); // => throws!
+
+
+// WALK THE DOM
+function walkTheDom(node, func) {
+  func(node);
+  node = node.firstChild;
+  while (node) {
+    walkTheDom(node, func);
+    node = node.nextSibling;
+  }
+}
+
+walkTheDom(document.body, function(node) {
+  console.log(node)
+});
